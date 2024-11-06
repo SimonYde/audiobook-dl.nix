@@ -1,0 +1,44 @@
+{
+  "nodes": {
+    "audiobook-dl-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726429416,
+        "narHash": "sha256-vigNq7Jrt04vkylV5rS5yEZv+9wCTpzEpBFZvxqT/M4=",
+        "owner": "jo1gi",
+        "repo": "audiobook-dl",
+        "rev": "0a3ea07c69a7cf88998b2727141440e24f0359bf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jo1gi",
+        "repo": "audiobook-dl",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1729665710,
+        "narHash": "sha256-AlcmCXJZPIlO5dmFzV3V2XF6x/OpNWUV8Y/FMPGd8Z4=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "2768c7d042a37de65bb1b5b3268fc987e534c49d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "audiobook-dl-src": "audiobook-dl-src",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
