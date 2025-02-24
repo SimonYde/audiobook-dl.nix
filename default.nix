@@ -3,10 +3,20 @@
   python3,
   audiobook-dl-src,
 }:
+let
+  mkDate =
+    longDate:
+    (lib.concatStringsSep "-" [
+      (builtins.substring 0 4 longDate)
+      (builtins.substring 4 2 longDate)
+      (builtins.substring 6 2 longDate)
+    ]);
+  date = mkDate (audiobook-dl-src.lastModifiedDate or "19700101");
+in
 
-python3.pkgs.buildPythonApplication rec {
+python3.pkgs.buildPythonApplication {
   pname = "audiobook-dl";
-  version = "unstable-2024-10-24";
+  version = "date-=${date}_${audiobook-dl-src.shortRev or "dirty"}";
   pyproject = true;
 
   src = audiobook-dl-src;
